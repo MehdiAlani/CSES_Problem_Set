@@ -24,27 +24,21 @@ int CharTonum(char Num){
     }
 }
 int main(){
-    long long int n = 0,index=0;
+    int n = 0,index=0;
     do{
     fflush(stdin);
     scanf("%d",&n);
-    }while(200000 < n || n < 2);
-    int ListNumber[n];
+    }while(200000 < n  || n < 2);
+    int ListNumber[n+1];
     char Msg[2*n-1];
-    for (int i = 0; i<)
     ListNumber[0]=-1;
-    for (int i=1;i<n-1;i++){
-        ListNumber[i]=i;
-    }
-    scanf("%s",Msg);
+    fflush(stdin);
+    fgets(Msg, sizeof(Msg), stdin);
     for(int i =0; i < 2*n-1;i=i+2){
         ListNumber[CharTonum(Msg[i])]=-1;
-        printf("%cd ",Msg[i]);
     }
-    for (int i=1;i<n-1;i++){
-        if(ListNumber[i]!=-1){
-            printf("%d",ListNumber[i]);
-        }
+    for(int i = 1; i < n+1;i++){
+        if(ListNumber[i]!=-1) printf("%d",i);
     }
     return 1;
 }
